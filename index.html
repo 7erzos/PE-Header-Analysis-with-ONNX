@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PE Malware Classifier</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+
+<body>
+  
+    <header>
+        <h1>PE Malware Classifier</h1>
+        <p class="description">Classify Windows Executables using PE Header Analysis</p>
+        <p class="author">Giancarlo Laterzo - IT 36500</p>
+    </header>
+
+
+    <main>
+
+        <section class="input-section">
+            <label for="sample-select">Choose a Sample:</label>
+            <select id="sample-select">
+                <option value="">-- Select an Example --</option>
+            </select>
+            <div class="divider">OR</div>
+            <label for="csv-input">Paste comma-separated PE header values:</label>
+            
+            <textarea
+                id="csv-input"
+                rows="4"
+                placeholder="144, 3, 0, 4, 0, 65535, 0, 184, ...">
+            </textarea>
+            
+            <button id="predict-btn" onclick="predict()">Classify</button>
+        </section>
+                            
+        <section id="results-section" class="results-section hidden">
+            <div id="predicted-class"></div>
+            <div id="confidence"></div>
+            <div id="confidence-bars"></div>
+        </section>
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
+    <script src="app.js?v=7"></script>
+</body>
+</html>
