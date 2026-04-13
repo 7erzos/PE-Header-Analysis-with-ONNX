@@ -27,7 +27,7 @@ I started with 54 columns and removed the SHA256 feature (identifier), e_magic (
  
 `Reserved1` was converted into a **binary anomaly indicator**, encoding whether the reserved field deviated from its expected normal value
 
-After converting `Reserved1` into an anomaly flag, I engineered three Boolean detector features, from `CheckSum`, `DllCharacteristics`, and `MajorImageVersion`. This follows prior malware studies that have found this zero-valued combination to be strongly associated with malicious executables. 
+After converting `Reserved1` into an anomaly flag, I engineered three boolean detector features, from `CheckSum`, `DllCharacteristics`, and `MajorImageVersion`. This follows prior malware studies that have found this zero-valued combination to be strongly associated with malicious executables. 
     `Dll Characteristics`: Has crucial flags such as `DYNAMIC_BASE`, `NX_COMPAT`, and `GUARD_CF`
     `MajorImageVersion`: The major version number of the image
     
