@@ -8,7 +8,7 @@ This is a web-based malware classifier that identifies Windows executables as be
 Malicious files can be found via static analysis without having to be executed. It is helpful for large-scale screening and triage since it is typically quicker and less costly to operate than dynamic analytic techniques like sandboxing. Dynamic analysis is slower, requires more resources, and can be evaded through anti-analysis tactics.
 
 ## Live Demo
-https://7erzos.github.io/PE-Malware-Classification/
+https://7erzos.github.io/PE-Header-Analysis-with-ONNX/
 
 ## Dataset
 https://figshare.com/articles/dataset/Windows_Malware_Detection_Dataset/21608262
