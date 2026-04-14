@@ -62,8 +62,6 @@ Hidden Layer 3: Linear(64 -> 32) -> BatchNorm1d -> ReLU -> Dropout(0.2)
 Output Layer: Linear(32 -> 7)
 ```
 
-The classifier uses a feedforward deep neural network with 53 PE-header input features. The first hidden layer projects the 53-dimensional input into a 128-dimensional learned representation, enabling the model to capture higher-order relationships among PE-header features. The dropout rate in the final hidden block was reduced from 0.3 to 0.2 to avoid over-regularizing the smaller compressed representation. The architecture concludes with a 7-class output layer which can then be used for multiclass PE malware classification.
-
 ## Results
 
 ### Multi-Layer Perceptron
